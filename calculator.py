@@ -10,34 +10,43 @@ while True:
     inp = raw_input("> ")
     inp_list = inp.split(" ")
 
+    # make validation function with below code, then add as an elif
+    # for item in inp_list[1:]:
+    #     if not item.isdigit():
+    #         print "invalid input."
+    #         continue
+
+    integer_list = [int(i) for i in inp_list[1:]]
+
+
     if inp_list[0] == "q":
         print "quit"
         break
 
     elif inp_list[0] == "+":
 
-        print add(inp_list[1:])
+        print add(integer_list)
 
     elif inp_list[0] == "-":
-        print subtract(int(inp_list[1]), int(inp_list[2]))
+        print subtract(integer_list)
 
     elif inp_list[0] == "*":
-        print multiply(int(inp_list[1]), int(inp_list[2]))
+        print multiply(integer_list)
 
     elif inp_list[0] == "/":
-        print divide(int(inp_list[1]), int(inp_list[2]))
+        print divide(integer_list)
 
     elif inp_list[0] == "square":
-        print square(int(inp_list[1]))
+        print square(integer_list)
 
     elif inp_list[0] == "cube":
-        print cube(int(inp_list[1]))
+        print cube(integer_list)
 
     elif inp_list[0] == "pow":
-        print power(int(inp_list[1]), int(inp_list[2]))
+        print power(integer_list)
 
     elif inp_list[0] == "mod":
-        print mod(int(inp_list[1]), int(inp_list[2]))
+        print mod(integer_list)
 
     else:
         print "invalid input. Try again."
