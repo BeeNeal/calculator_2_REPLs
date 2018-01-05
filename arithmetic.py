@@ -1,10 +1,14 @@
 """Math functions for calculator."""
 
 
-def add(num1, num2):
+def add(lst):
     """Return the sum of the two inputs."""
 
-    return num1 + num2
+    # num_list = []
+    # for i in lst:
+    #     num_list.append(int(i))
+    num_list = [int(i) for i in lst]
+    return sum(num_list)
 
 
 def subtract(num1, num2):

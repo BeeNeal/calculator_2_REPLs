@@ -15,7 +15,8 @@ while True:
         break
 
     elif inp_list[0] == "+":
-        print add(int(inp_list[1]), int(inp_list[2]))
+
+        print add(inp_list[1:])
 
     elif inp_list[0] == "-":
         print subtract(int(inp_list[1]), int(inp_list[2]))
@@ -37,3 +38,6 @@ while True:
 
     elif inp_list[0] == "mod":
         print mod(int(inp_list[1]), int(inp_list[2]))
+
+    else:
+        print "invalid input. Try again."
